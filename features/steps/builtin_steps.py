@@ -26,3 +26,9 @@ def step_verify_text_by_id(context, element_id, text):
     element = context.behave_driver.find_element(By.CSS_SELECTOR, ".oOutp")
     element_text = element.text.strip()
     assert text in element_text, f"Expected '{text}' to be in '{element_text}'"
+
+@then('I expect the input field with id "{field_id}" to contain the value "{expected_value}"')
+def step_verify_input_value(context, field_id, expected_value):
+    input_field = context.behave_driver.find_element(By.ID, field_id)
+    actual_value = input_field.get_attribute("value")
+    assert actual_value == expected_value, f"Expected value '{expected_value}', but got '{actual_value}'."

@@ -9,4 +9,4 @@ Scenario: I can calculate the area of a triangle
     When I input "15" into the search field with id "b"
     When I input "17" into the search field with id "c"
     And I click the element with type "button"
-    Then I expect that the element with class "oOutp" contains the text "60"
+    Then I expect the input field with id "_d" to contain the value "60"
