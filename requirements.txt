@@ -1,3 +1,5 @@
 pytest
-behave
 selenium
+webdriver_manager
+behave
+behave-webdriver
