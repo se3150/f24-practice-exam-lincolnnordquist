@@ -52,4 +52,4 @@ jobs:
           pip install behave behave-webdriver
 
       - name: Run Behave Tests
-        run: behave HeronsCalculator.feature
+        run: behave features/HeronsCalculator.feature
